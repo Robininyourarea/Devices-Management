@@ -1,0 +1,32 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+
+  backend:
+    image: mxnattha/geno-backend:latest
+    ports:
+      - '5000:5000'
+    env_file: 
+      - ./env/.env
+    depends_on:
+      - mongodb
+
+
+  frontend:
+    image: mxnattha/geno-frontend:latest
+    ports: 
+      - '5173:5173'
+    stdin_open: true
+    tty: true
+    depends_on: 
+      - backend
+
+# only name volume
+volumes: 
+  mongo-data:
