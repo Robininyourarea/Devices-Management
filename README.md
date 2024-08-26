@@ -1,5 +1,13 @@
 # Devices-Management
 
+## Web Application Preview
+
+#### Login page
+![Demo Image](assets/scrn29.png)
+#### Register page
+![Demo Image](assets/scrn30.png)
+#### Devices page
+![Demo Image](assets/scrn31.png)
 ## Prerequisites
 
 Before you start, make sure you have the following installed:
